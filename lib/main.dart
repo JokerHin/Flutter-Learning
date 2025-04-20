@@ -31,6 +31,15 @@ class MyApp extends StatelessWidget {
             IconButton(icon: const Icon(Icons.search), onPressed: () {}),
           ],
         ),
+        bottomNavigationBar: NavigationBar(
+          destinations: [
+            NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+            NavigationDestination(icon: Icon(Icons.person), label: 'Person'),
+          ],
+          onDestinationSelected: (int value) {
+            print(value);
+          },
+        ),
       ),
     );
   }
