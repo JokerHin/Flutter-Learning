@@ -26,10 +26,24 @@ class MyApp extends StatelessWidget {
           title: const Text('Flutter Maps'),
           centerTitle: true,
           backgroundColor: Colors.teal,
-          leading: Icon(Icons.login),
           actions: [
             IconButton(icon: const Icon(Icons.search), onPressed: () {}),
           ],
+        ),
+        drawer: Drawer(
+          child: Column(
+            children: [
+              DrawerHeader(child: Text('Header')),
+              ListTile(
+                leading: const Icon(Icons.home),
+                title: const Text('Home'),
+              ),
+              ListTile(
+                leading: const Icon(Icons.person),
+                title: const Text('Person'),
+              ),
+            ],
+          ),
         ),
         floatingActionButton: Column(
           mainAxisSize: MainAxisSize.min,
