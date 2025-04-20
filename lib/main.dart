@@ -66,24 +66,23 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Container(
           color: Colors.white,
           width: double.infinity,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
+          height: double.infinity,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                width: 200.0,
-                height: 200.0,
-                padding: EdgeInsets.all(50.0),
-                margin: EdgeInsets.all(50.0),
+                width: 100.0,
+                height: 100.0,
+
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25.0),
                   color: Colors.cyanAccent,
                 ),
               ),
               Container(
-                width: 200.0,
-                height: 200.0,
-                padding: EdgeInsets.all(50.0),
-                margin: EdgeInsets.all(10.0),
+                width: 100.0,
+                height: 100.0,
+
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25.0),
                   color: Colors.cyanAccent,
