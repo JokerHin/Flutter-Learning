@@ -64,14 +64,8 @@ class _MyHomePageState extends State<MyHomePage> {
         leading: Icon(Icons.notifications, color: Colors.amber),
       ),
       body: Container(
-        padding: EdgeInsets.all(50.0),
         child: Stack(
           children: [
-            Image.asset(
-              'assets/images/background.jpg',
-              fit: BoxFit.cover,
-              height: 300,
-            ),
             SizedBox(
               height: 300,
               child: Center(
@@ -84,6 +78,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
+            ),
+            ListTile(
+              leading: Icon(Icons.join_full),
+              tileColor: Colors.red,
+              title: Text('What is your Name?'),
+              trailing: Text("Hello"),
+              onTap: () {
+                print("Hello $name");
+              },
             ),
           ],
         ),
