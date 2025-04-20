@@ -62,40 +62,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Container(
-          color: Colors.white,
-          width: double.infinity,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                width: 100.0,
-                height: 100.0,
-
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.0),
-                  color: Colors.cyanAccent,
-                ),
-                child: Center(
-                  child: Text(
-                    "Hello World",
-                    style: TextStyle(fontSize: 20.0, color: Colors.black),
-                  ),
-                ),
-              ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.0),
-                  color: Colors.cyanAccent,
-                ),
-              ),
-            ],
-          ),
-        ),
+      body: Image.network(
+        'https://static.vecteezy.com/system/resources/previews/004/904/918/non_2x/apple-background-illustration-free-vector.jpg',
+        height: double.infinity,
+        fit: BoxFit.cover,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
