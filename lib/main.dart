@@ -62,10 +62,27 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text(widget.title),
       ),
-      body: Image.asset(
-        'assets/images/background.jpg',
-        height: double.infinity,
-        fit: BoxFit.cover,
+      body: Stack(
+        children: [
+          Image.asset(
+            'assets/images/background.jpg',
+            fit: BoxFit.cover,
+            height: 300,
+          ),
+          SizedBox(
+            height: 300,
+            child: Center(
+              child: Text(
+                'Flutter is awesome!',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
