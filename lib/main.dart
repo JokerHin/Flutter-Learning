@@ -31,6 +31,14 @@ class MyApp extends StatelessWidget {
             IconButton(icon: const Icon(Icons.search), onPressed: () {}),
           ],
         ),
+        floatingActionButton: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
+            SizedBox(height: 10),
+            FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
+          ],
+        ),
         bottomNavigationBar: NavigationBar(
           destinations: [
             NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
