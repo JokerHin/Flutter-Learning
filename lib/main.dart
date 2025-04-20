@@ -66,9 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Container(
           color: Colors.white,
           width: double.infinity,
-          height: double.infinity,
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
               Container(
                 width: 100.0,
@@ -77,6 +76,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25.0),
                   color: Colors.cyanAccent,
+                ),
+                child: Center(
+                  child: Text(
+                    "Hello World",
+                    style: TextStyle(fontSize: 20.0, color: Colors.black),
+                  ),
                 ),
               ),
               Container(
