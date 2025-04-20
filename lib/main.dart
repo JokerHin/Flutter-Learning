@@ -21,7 +21,17 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
       ),
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Flutter Maps'),
+          centerTitle: true,
+          backgroundColor: Colors.teal,
+          leading: Icon(Icons.login),
+          actions: [
+            IconButton(icon: const Icon(Icons.search), onPressed: () {}),
+          ],
+        ),
+      ),
     );
   }
 }
