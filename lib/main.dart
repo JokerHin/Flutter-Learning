@@ -61,35 +61,15 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
         title: Text(widget.title),
-        leading: Icon(Icons.notifications, color: Colors.amber),
+        leading: Icon(Icons.notifications, color: Colors.white),
       ),
-      body: Container(
-        child: Stack(
-          children: [
-            SizedBox(
-              height: 300,
-              child: Center(
-                child: Text(
-                  'Flutter is awesome!',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.join_full),
-              tileColor: Colors.red,
-              title: Text('What is your Name?'),
-              trailing: Text("Hello"),
-              onTap: () {
-                print("Hello $name");
-              },
-            ),
-          ],
-        ),
+      body: Wrap(
+        children: [
+          Text("FLutter is awesome"),
+          Text("FLutter is awesome"),
+          Text("FLutter is awesome"),
+          Text("FLutter is awesome"),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
