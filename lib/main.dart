@@ -61,28 +61,32 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
         title: Text(widget.title),
+        leading: Icon(Icons.notifications, color: Colors.amber),
       ),
-      body: Stack(
-        children: [
-          Image.asset(
-            'assets/images/background.jpg',
-            fit: BoxFit.cover,
-            height: 300,
-          ),
-          SizedBox(
-            height: 300,
-            child: Center(
-              child: Text(
-                'Flutter is awesome!',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+      body: Container(
+        padding: EdgeInsets.all(50.0),
+        child: Stack(
+          children: [
+            Image.asset(
+              'assets/images/background.jpg',
+              fit: BoxFit.cover,
+              height: 300,
+            ),
+            SizedBox(
+              height: 300,
+              child: Center(
+                child: Text(
+                  'Flutter is awesome!',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
