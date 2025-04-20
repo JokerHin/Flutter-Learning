@@ -64,19 +64,32 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Container(
-          width: 200,
-          height: 400,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(25.0),
-            color: Colors.cyanAccent,
-          ),
-          child: Text(
-            "Hello World!",
-            style: TextStyle(
-              fontSize: 30,
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-            ),
+          color: Colors.white,
+          width: double.infinity,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 200.0,
+                height: 200.0,
+                padding: EdgeInsets.all(50.0),
+                margin: EdgeInsets.all(50.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25.0),
+                  color: Colors.cyanAccent,
+                ),
+              ),
+              Container(
+                width: 200.0,
+                height: 200.0,
+                padding: EdgeInsets.all(50.0),
+                margin: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25.0),
+                  color: Colors.cyanAccent,
+                ),
+              ),
+            ],
           ),
         ),
       ),
