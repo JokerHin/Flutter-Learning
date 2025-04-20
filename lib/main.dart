@@ -62,8 +62,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text(widget.title),
       ),
-      body: Image.network(
-        'https://static.vecteezy.com/system/resources/previews/004/904/918/non_2x/apple-background-illustration-free-vector.jpg',
+      body: Image.asset(
+        'assets/images/background.jpg',
         height: double.infinity,
         fit: BoxFit.cover,
       ),
