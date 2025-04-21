@@ -1,3 +1,4 @@
+import 'package:first_app/widgets/navbar_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -50,10 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.teal,
         actions: [IconButton(icon: const Icon(Icons.search), onPressed: () {})],
       ),
-      body:
-          currentIndex == 0
-              ? const Center(child: Text('Home'))
-              : const Center(child: Text('Person')),
+
       drawer: Drawer(
         child: Column(
           children: [
@@ -75,18 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
           FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
         ],
       ),
-      bottomNavigationBar: NavigationBar(
-        destinations: [
-          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.person), label: 'Person'),
-        ],
-        onDestinationSelected: (int value) {
-          setState(() {
-            currentIndex = value;
-          });
-        },
-        selectedIndex: currentIndex,
-      ),
+      bottomNavigationBar: NavbarWidget(),
     );
   }
 }
