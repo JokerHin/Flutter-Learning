@@ -16,10 +16,22 @@ class WidgetTree extends StatelessWidget {
         title: Text('Flutter Mapp'),
         centerTitle: true,
         backgroundColor: Colors.teal,
-        actions: [IconButton(icon: const Icon(Icons.search), onPressed: () {})],
+        actions: [
+          IconButton(
+            onPressed: () {
+              isDarkModeNotifier.value = !isDarkModeNotifier.value;
+            },
+            icon: ValueListenableBuilder(
+              valueListenable: isDarkModeNotifier,
+              builder: (context, isDarkMode, child) {
+                return Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode);
+              },
+            ),
+          ),
+        ],
       ),
       body: ValueListenableBuilder(
-        valueListenable: selectedPageNotifer,
+        valueListenable: selectedPageNotifier,
         builder: (context, selectedPage, child) {
           return pages.elementAt(selectedPage);
         },
