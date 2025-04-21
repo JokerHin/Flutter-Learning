@@ -1,6 +1,7 @@
+import 'package:first_app/data/notifiers.dart';
 import 'package:first_app/views/pages/home_page.dart';
 import 'package:first_app/views/pages/profile_page.dart';
-import 'package:first_app/widgets/navbar_widget.dart';
+import 'package:first_app/views/widgets/navbar_widget.dart';
 import 'package:flutter/material.dart';
 
 List<Widget> pages = [HomePage(), ProfilePage()];
@@ -17,7 +18,12 @@ class WidgetTree extends StatelessWidget {
         backgroundColor: Colors.teal,
         actions: [IconButton(icon: const Icon(Icons.search), onPressed: () {})],
       ),
-      body: pages.elementAt(1),
+      body: ValueListenableBuilder(
+        valueListenable: selectedPageNotifer,
+        builder: (context, selectedPage, child) {
+          return pages.elementAt(selectedPage);
+        },
+      ),
       bottomNavigationBar: NavbarWidget(),
     );
   }
