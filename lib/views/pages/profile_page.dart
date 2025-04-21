@@ -72,7 +72,17 @@ class _ProfilePageState extends State<ProfilePage> {
                 });
               },
             ),
-            Image.asset('assets/images/background.jpg'),
+            InkWell(
+              splashColor: Colors.teal,
+              onTap: () {
+                print('Image tapped');
+              },
+              child: Container(
+                height: 200,
+                width: double.infinity,
+                color: Colors.white10,
+              ),
+            ),
           ],
         ),
       ),
