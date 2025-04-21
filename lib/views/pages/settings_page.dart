@@ -41,7 +41,35 @@ class _SettingsPageState extends State<SettingsPage> {
                   backgroundColor: Colors.teal,
                   foregroundColor: Colors.white,
                 ),
-                child: Text('COpen Snackbar'),
+                child: Text('Open Snackbar'),
+              ),
+              Divider(color: Colors.teal, thickness: 2.0, endIndent: 200.0),
+              Container(height: 50.0, child: VerticalDivider()),
+              ElevatedButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text('Hello from AlertDialog!'),
+                        content: Text('This is a simple dialog.'),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text('Close'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.teal,
+                  foregroundColor: Colors.white,
+                ),
+                child: Text('Open Dialog'),
               ),
               DropdownButton(
                 value: menuItem,
