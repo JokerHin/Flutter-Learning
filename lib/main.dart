@@ -1,5 +1,5 @@
 import 'package:first_app/data/notifiers.dart';
-import 'package:first_app/views/widget_tree.dart';
+import 'package:first_app/views/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
               brightness: (isDarkMode ? Brightness.dark : Brightness.light),
             ),
           ),
-          home: WidgetTree(),
+          home: WelcomePage(),
         );
       },
     );
