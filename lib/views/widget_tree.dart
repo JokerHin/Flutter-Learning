@@ -16,7 +16,6 @@ class WidgetTree extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Mapp'),
-        centerTitle: true,
         backgroundColor: Colors.teal,
         actions: [
           IconButton(
