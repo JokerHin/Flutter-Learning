@@ -1,6 +1,6 @@
-import 'package:first_app/views/widget_tree.dart';
-import 'package:first_app/views/widgets/hero_widget.dart';
+import 'package:first_app/views/pages/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -13,18 +13,60 @@ class WelcomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            HeroWidget(),
+            Text(
+              'Welcome to My ',
+              style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Mobile App',
+              style: TextStyle(
+                fontSize: 50.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.teal,
+              ),
+            ),
+            Lottie.asset('assets/lotties/welcome.json'),
+            FittedBox(
+              child: Text(
+                'Flutter Mapp',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 50.0,
+                  letterSpacing: 50.0,
+                ),
+              ),
+            ),
+            SizedBox(height: 30.0),
             FilledButton(
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return WidgetTree();
+                      return LoginPage();
                     },
                   ),
                 );
               },
+              style: FilledButton.styleFrom(
+                minimumSize: Size(double.infinity, 40.0),
+              ),
+              child: Text('Get Started'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginPage();
+                    },
+                  ),
+                );
+              },
+              style: FilledButton.styleFrom(
+                minimumSize: Size(double.infinity, 40.0),
+              ),
               child: Text('Login'),
             ),
           ],
