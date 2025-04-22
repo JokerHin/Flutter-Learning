@@ -28,7 +28,7 @@ class HeroWidget extends StatelessWidget {
               fontWeight: FontWeight.bold,
               fontSize: 50.0,
               letterSpacing: 50.0,
-              color: Colors.white60,
+              color: Colors.white30,
             ),
           ),
         ),
